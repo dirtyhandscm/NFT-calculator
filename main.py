@@ -8,7 +8,9 @@ def profit_calculator():
     royalty_percentage = float(royalty.get())
     needed_price = ppg * roi_percentage
     print(needed_price)
-    price_plus_royalty = needed_price + (needed_price * (royalty_percentage / 100))
+    price_plus_royalty = round(
+        needed_price + (needed_price * (royalty_percentage / 100)), 2
+    )
     print(price_plus_royalty)
     answer.config(text=price_plus_royalty, font=("Arial", 20))
 
