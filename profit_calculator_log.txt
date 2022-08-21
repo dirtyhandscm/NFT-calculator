@@ -6,3 +6,5 @@
 15 Price paid 
 2022-08-04 14:24:51.858495: 1.82 Sale 1.32 Price paid 
 1.25 ROI 10 Royalty 
+2022-08-20 15:55:22.272122: (3.59, 2.01) Sale 1.34 Price paid 
+2.5 ROI 7.25 Royalty 

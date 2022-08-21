@@ -7,6 +7,7 @@ def profit_calculator():
     roi_percentage = float(roi.get())
     royalty_percentage = float(royalty.get())
     needed_price = ppg * roi_percentage
+    profits = needed_price - ppg
     print(needed_price)
     price_plus_royalty = round(
         needed_price + (needed_price * (royalty_percentage / 100)), 2
@@ -15,7 +16,8 @@ def profit_calculator():
     answer.config(text=price_plus_royalty, font=("Arial", 20))
 
     print("Price plus royalty: " + str(price_plus_royalty))
-    return price_plus_royalty
+    print("Profit: " + str(profits))
+    return price_plus_royalty, profits
 
 
 # write to a text file with the current date and time and the profit calculator output and rio_percentage
