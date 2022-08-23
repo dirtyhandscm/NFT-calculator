@@ -1,9 +1,11 @@
 import tkinter
 import datetime
 
+
 # nft profit calculator
 def profit_calculator():
     ppg = float(ppg_entry.get())
+
     roi_percentage = float(roi.get())
     royalty_percentage = float(royalty.get())
     needed_price = ppg * roi_percentage
@@ -34,6 +36,7 @@ def log_sale():
             + " ROI "
             + str(royalty.get())
             + " Royalty \n"
+            + str()
         )
 
 
@@ -55,7 +58,13 @@ input_label.grid(row=0, column=0)
 
 # input for price paid
 ppg_entry = tkinter.Entry(window)
+ppg_entry.focus_force()
 ppg_entry.grid(row=0, column=1)
+
+# lesson_learned = tkinter.Text(height=10, width=35)
+# lesson_learned.insert(tkinter.END, "Lesson Learned from this trade:")
+# print
+# lesson_learned.grid(row=8, column=0)
 
 
 # label for input
@@ -76,7 +85,11 @@ royalty = tkinter.Entry(window)
 royalty.insert(0, "0")
 royalty.grid(row=3, column=1)
 
-button = tkinter.Button(window, text="Calculate", command=profit_calculator)
+button = tkinter.Button(
+    window,
+    text="Calculate",
+    command=profit_calculator,
+)
 button.grid(row=4, column=1)
 
 log_profits = tkinter.Button(window, text="Log profits", command=log_sale)
